@@ -1,11 +1,11 @@
-# Nome do meu projeto
+# Alura Challenge Mobile
 
 Rápida descrição do objetivo de fazer esse projeto
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
-| :label: Tecnologias | java, html, ruby, c# (tecnologias utilizadas)
+| :sparkles: Nome        | **Alura Challenge Mobile**
+| :label: Tecnologias | Flutter, Dart
 | :rocket: URL         | https://url-deploy.com.br
 | :fire: Desafio     | https://url-do-desafio.com.br
 
@@ -14,4 +14,4 @@ Rápida descrição do objetivo de fazer esse projeto
 
 ## Detalhes do projeto
 
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
+O projeto consiste na criação de um aplicativo nos moldes do Alura Challenge Mobile
