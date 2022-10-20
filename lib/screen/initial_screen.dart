@@ -45,27 +45,83 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Container(
-              color: Colors.yellow,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SingleChildScrollView(
-                  child: Row(
-                    children: [
-                      Container(
-                        color: Colors.green,
-                        height: 80,
-                      ),
-                      Container(
-                        color: Colors.red,
-                        height: 80,
-                      )
-                    ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Padding(
+            padding: const EdgeInsets.only(left: 8.0,),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.blueAccent)),
+                    onPressed: () {},
+                    child: Text(
+                      ("Front End"),
+                      style: TextStyle(fontSize: 22),
+                    ),
                   ),
                 ),
-              ),
-            )
-          ],
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.green)),
+                    onPressed: () {},
+                    child: Text(
+                      ("Programação"),
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red)),
+                    onPressed: () {},
+                    child: Text(
+                      ("Mobile"),
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.cyan)),
+                    onPressed: () {},
+                    child: Text(
+                      ("Data Science"),
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.redAccent)),
+                    onPressed: () {},
+                    child: Text(
+                      ("Devops"),
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.purple)),
+                    onPressed: () {},
+                    child: Text(
+                      ("UX e Design"),
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ]
         ),
       ),
     );
