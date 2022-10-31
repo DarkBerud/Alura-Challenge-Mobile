@@ -1,6 +1,7 @@
 import 'package:alura_challenge_mobile/Components/banner.dart';
-import 'package:alura_challenge_mobile/Components/categories.dart';
+import 'package:alura_challenge_mobile/Components/categoriesList.dart';
 import 'package:alura_challenge_mobile/Components/videoBox.dart';
+import 'package:alura_challenge_mobile/screen/form_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +22,6 @@ class _HomePageState extends State<HomePage> {
             child: Center(
           child: Text(
             "MOBFLIX",
-            style: TextStyle(),
             textAlign: TextAlign.center,
           ),
         )),
@@ -34,7 +34,14 @@ class _HomePageState extends State<HomePage> {
           videoBox(),
         ]),
       ),
-      floatingActionButton: FloatingActionButton( onPressed: (){}, child: Icon(Icons.add, size: 48,),backgroundColor: Colors.deepPurpleAccent,),
+      floatingActionButton: FloatingActionButton( onPressed: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (contextNew) => FormScreen(),
+          ),
+        );
+      }, child: Icon(Icons.add, size: 48,),backgroundColor: Colors.deepPurpleAccent,),
     );
   }
 }

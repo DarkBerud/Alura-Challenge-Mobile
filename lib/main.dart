@@ -1,3 +1,4 @@
+import 'package:alura_challenge_mobile/screen/form_screen.dart';
 import 'package:alura_challenge_mobile/screen/initial_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
       ),
-      home: const HomePage(),
+      home: const FormScreen(),
     );
   }
 }

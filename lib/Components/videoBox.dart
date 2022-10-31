@@ -1,3 +1,4 @@
+import 'package:alura_challenge_mobile/Components/categories/Mobile.dart';
 import 'package:flutter/material.dart';
 
 class videoBox extends StatefulWidget {
@@ -18,25 +19,14 @@ class _videoBoxState extends State<videoBox> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              MobileCard(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14.0),
-                        )),
-                    backgroundColor: MaterialStateProperty.all(Colors.red),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    ("Mobile"),
-                    style: TextStyle(fontSize: 22),
-                  ),
-                ),
-              ),
-              Padding( padding: const EdgeInsets.all(8.0),
-                  child:Container(color: Colors.blueGrey, width: 335, height: 180,))
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    color: Colors.blueGrey,
+                    width: 335,
+                    height: 180,
+                  ))
             ]),
       ),
     );
