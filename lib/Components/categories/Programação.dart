@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ProgramacaoCard extends StatelessWidget {
-  const ProgramacaoCard({Key? key}) : super(key: key);
+
+  final int option;
+  const ProgramacaoCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,13 @@ class ProgramacaoCard extends StatelessWidget {
           backgroundColor:
           MaterialStateProperty.all(Colors.green),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            Navigator.pop(context);
+          }
+        },
         child: const Text(
           ("Programação"),
           style: TextStyle(fontSize: 22),

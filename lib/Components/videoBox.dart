@@ -19,7 +19,7 @@ class _videoBoxState extends State<videoBox> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MobileCard(),
+              MobileCard(0),
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(

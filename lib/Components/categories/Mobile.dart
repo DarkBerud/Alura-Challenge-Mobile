@@ -1,7 +1,9 @@
+import 'package:alura_challenge_mobile/Components/categories/Categorie.dart';
 import 'package:flutter/material.dart';
 
 class MobileCard extends StatelessWidget {
-  const MobileCard({Key? key}) : super(key: key);
+  final int option;
+  const MobileCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,14 @@ class MobileCard extends StatelessWidget {
               )),
           backgroundColor: MaterialStateProperty.all(Colors.red),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            CategorieCard().categorie = 2;
+            Navigator.pop(context);
+          }
+        },
         child: const Text(
           ("Mobile"),
           style: TextStyle(fontSize: 22),

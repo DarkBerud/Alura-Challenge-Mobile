@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class UxeDesignCard extends StatelessWidget {
-  const UxeDesignCard({Key? key}) : super(key: key);
+
+  final int option;
+  const UxeDesignCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,13 @@ class UxeDesignCard extends StatelessWidget {
           backgroundColor:
           MaterialStateProperty.all(Colors.purple),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            Navigator.pop(context);
+          }
+        },
         child: const Text(
           ("UX e Design"),
           style: TextStyle(fontSize: 22),

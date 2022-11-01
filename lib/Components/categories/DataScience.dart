@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DataScienceCard extends StatelessWidget {
-  const DataScienceCard({Key? key}) : super(key: key);
+
+  final int option;
+  const DataScienceCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +18,13 @@ class DataScienceCard extends StatelessWidget {
               )),
           backgroundColor: MaterialStateProperty.all(Colors.cyan),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            Navigator.pop(context);
+          }
+        },
         child: const Text(
           ("Data Science"),
           style: TextStyle(fontSize: 22),

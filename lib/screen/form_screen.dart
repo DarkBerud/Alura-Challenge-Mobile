@@ -1,5 +1,12 @@
+import 'package:alura_challenge_mobile/Components/categories/Categorie.dart';
+import 'package:alura_challenge_mobile/Components/categories/DataScience.dart';
+import 'package:alura_challenge_mobile/Components/categories/Devops.dart';
+import 'package:alura_challenge_mobile/Components/categories/FrontEnd.dart';
+import 'package:alura_challenge_mobile/Components/categories/Programa%C3%A7%C3%A3o.dart';
+import 'package:alura_challenge_mobile/Components/categories/UXeDesign.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube/youtube_thumbnail.dart';
+import '../Components/categories/Mobile.dart';
 
 class FormScreen extends StatefulWidget {
   const FormScreen({Key? key}) : super(key: key);
@@ -10,7 +17,6 @@ class FormScreen extends StatefulWidget {
 
 class _FormScreenState extends State<FormScreen> {
   TextEditingController imageController = TextEditingController();
-  TextEditingController categoriesController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 
@@ -90,7 +96,25 @@ class _FormScreenState extends State<FormScreen> {
                       backgroundColor:
                           MaterialStateProperty.all(Color(0xFF275FA3)),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(context: context, builder: (context) => AlertDialog(
+                        title: Text("Escolha uma categoria"),
+                         content: SizedBox(
+                           height: 400,
+                           width: 50,
+                           child: ListView(
+                             children: [
+                               FrontEndCard(1),
+                               ProgramacaoCard(1),
+                               MobileCard(1),
+                               DataScienceCard(1),
+                               DevopsCard(1),
+                               UxeDesignCard(1),
+                             ],
+                           ),
+                         ),
+                      ));
+                    },
                     child: Text(
                       "Mobile, Front-End...                                                             ",
                       style: TextStyle(
@@ -101,27 +125,6 @@ class _FormScreenState extends State<FormScreen> {
                     ),
                   ),
                 ),
-                // TextFormField(
-                //     onChanged: (text) {
-                //       setState(() {});
-                //     },
-                //     validator: (value) {
-                //       if (valueValidator(value)) {
-                //         return "Insira uma categoria válida!";
-                //       }
-                //       return null;
-                //     },
-                //     controller: categoriesController,
-                //     style: TextStyle(color: Colors.white),
-                //     decoration: InputDecoration(
-                //       border: OutlineInputBorder(
-                //           borderRadius: BorderRadius.circular(10)),
-                //       hintText: "Mobile, Front-end...",
-                //       hintStyle: TextStyle(color: Color(0xFFB0B0B0)),
-                //       fillColor: Color(0xFF275FA3),
-                //       filled: true,
-                //     ),
-                // ),
                 Padding(
                   padding: EdgeInsets.only(top: 40),
                   child: Column(
@@ -135,7 +138,9 @@ class _FormScreenState extends State<FormScreen> {
                           style: TextStyle(color: Colors.white, fontSize: 26),
                         ),
                       ),
-                      Container(),
+                      Container(
+                        child: CategorieCard(),
+                      ),
                       Container(
                         height: 194,
                         width: 345,

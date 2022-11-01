@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class DevopsCard extends StatelessWidget {
-  const DevopsCard({Key? key}) : super(key: key);
+
+  final int option;
+  const DevopsCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,13 @@ class DevopsCard extends StatelessWidget {
           backgroundColor:
           MaterialStateProperty.all(Colors.redAccent),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            Navigator.pop(context);
+          }
+        },
         child: const Text(
           ("Devops"),
           style: TextStyle(fontSize: 22),

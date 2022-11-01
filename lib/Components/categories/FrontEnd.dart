@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FrontEndCard extends StatelessWidget {
-  const FrontEndCard({Key? key}) : super(key: key);
+
+  final int option;
+  const FrontEndCard(this.option, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,13 @@ class FrontEndCard extends StatelessWidget {
           MaterialStateProperty.all(Colors.blueAccent),
         ),
         // style: ElevatedButton.styleFrom(backgroundColor: Colors.blueAccent,),
-        onPressed: () {},
+        onPressed: () {
+          if(option == 0){
+
+          }else{
+            Navigator.pop(context);
+          }
+        },
         child: Text(
           ("Front End"),
           style: TextStyle(fontSize: 22),

@@ -25,12 +25,12 @@ class _categoriesState extends State<categories> {
         ),
         child: Row(
           children: [
-            FrontEndCard(),
-            ProgramacaoCard(),
-            MobileCard(),
-            DataScienceCard(),
-            DevopsCard(),
-            UxeDesignCard(),
+            FrontEndCard(0),
+            ProgramacaoCard(0),
+            MobileCard(0),
+            DataScienceCard(0),
+            DevopsCard(0),
+            UxeDesignCard(0),
           ],
         ),
       ),
