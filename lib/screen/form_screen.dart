@@ -138,9 +138,7 @@ class _FormScreenState extends State<FormScreen> {
                           style: TextStyle(color: Colors.white, fontSize: 26),
                         ),
                       ),
-                      Container(
-                        child: CategorieCard(),
-                      ),
+                      CategorieCard(),
                       Container(
                         height: 194,
                         width: 345,

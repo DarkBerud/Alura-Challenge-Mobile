@@ -2,6 +2,7 @@ import 'package:alura_challenge_mobile/Components/categories/Categorie.dart';
 import 'package:flutter/material.dart';
 
 class MobileCard extends StatelessWidget {
+
   final int option;
   const MobileCard(this.option, {Key? key}) : super(key: key);
 
@@ -22,7 +23,8 @@ class MobileCard extends StatelessWidget {
           if(option == 0){
 
           }else{
-            CategorieCard().categorie = 2;
+            CategorieCard().categorie = "mobile";
+            print(CategorieCard().categorie);
             Navigator.pop(context);
           }
         },
