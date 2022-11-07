@@ -2,7 +2,11 @@ import 'package:alura_challenge_mobile/Components/categories/Mobile.dart';
 import 'package:flutter/material.dart';
 
 class videoBox extends StatefulWidget {
-  const videoBox({Key? key}) : super(key: key);
+  String url;
+  String categorie;
+  String image;
+
+  videoBox(this.url, this.categorie, this.image, {Key? key}) : super(key: key);
 
   @override
   State<videoBox> createState() => _videoBoxState();

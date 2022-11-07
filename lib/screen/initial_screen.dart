@@ -30,8 +30,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           banner(),
           categories(),
-          videoBox(),
-          videoBox(),
+          videoBox("url1", "categoria1", "imagem1"),
+          videoBox("url2", "categoria2", "imagem2"),
         ]),
       ),
       floatingActionButton: FloatingActionButton( onPressed: (){
