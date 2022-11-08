@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:alura_challenge_mobile/Components/videoBox.dart';
 import 'package:alura_challenge_mobile/data/database.dart';
 import 'package:sqflite/sqflite.dart';
@@ -13,7 +15,27 @@ class VideoDao {
   static const String _categorie = "categorie";
   static const String _image = "image";
 
-  save(videoBox video) async {}
+  save(videoBox video) async {
+    final Database bancoDeDados = await getDataBase();
+    var itemExists = await find(video.url);
+    Map<String, dynamic> videoMap = toMap(video);
+    if (itemExists.isEmpty) {
+      return await bancoDeDados.insert(_tablename, videoMap);
+    } else {
+      return await bancoDeDados.update(
+        _tablename,
+        videoMap,
+      );
+    }
+  }
+
+  Map<String,dynamic> toMap(videoBox video){
+    final Map<String, dynamic> mapOfVideos = Map();
+    mapOfVideos[_url] = video.url;
+    mapOfVideos[_categorie] = video.categorie;
+    mapOfVideos[_image] = video.image;
+    return mapOfVideos;
+  }
 
   Future<List<videoBox>> findAll() async {
     final Database bancoDeDados = await getDataBase();
@@ -39,5 +61,8 @@ class VideoDao {
     return toList(result);
   }
 
-  delete(String url) async {}
+  delete(String url) async {
+    final Database bancoDeDados = await getDataBase();
+    return bancoDeDados.delete(_tablename, where: "$_url = ?", whereArgs: [url]);
+  }
 }
